@@ -21,6 +21,9 @@ class HTMLNode:
         raise NotImplementedError
 
     def props_to_html(self):
+        if not self.props:
+            return ""
+
         prop_strings = []
         for attribute, value in self.props.items():
             prop_strings.append(f'{attribute}="{value}"')
