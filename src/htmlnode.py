@@ -27,4 +27,4 @@ class HTMLNode:
         prop_strings = []
         for attribute, value in self.props.items():
             prop_strings.append(f'{attribute}="{value}"')
-        return " ".join(prop_strings)
+        return " " + " ".join(prop_strings)

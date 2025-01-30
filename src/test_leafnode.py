@@ -10,6 +10,12 @@ class TestLeafNode(unittest.TestCase):
         result = node.to_html()
         self.assertEqual(expected, result)
 
+    def test_to_html_with_props(self):
+        node = LeafNode("a", "Click me!", {"href": "https://www.google.com"})
+        expected = '<a href="https://www.google.com">Click me!</a>'
+        result = node.to_html()
+        self.assertEqual(expected, result)
+
 
 if __name__ == "__main__":
     unittest.main()
